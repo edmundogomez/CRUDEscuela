@@ -1,4 +1,4 @@
-package com.citi.api.entity;
+package com.citi.api.entidad;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,13 +9,13 @@ import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "materia")
-public class Subject {
+public class Materia {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id; 
 
     @Column(name = "nombre")
-    private String name;
+    private String nombre;
 
     public int getId() {
         return id;
@@ -25,12 +25,12 @@ public class Subject {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
 

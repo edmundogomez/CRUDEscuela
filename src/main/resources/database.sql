@@ -22,7 +22,7 @@ CREATE TABLE estudiante_materia(
 
     estudiante_id int NOT NULL,
     materia_id int NOT NULL,
-    calificacion int,
+    promedio float,
 
     PRIMARY KEY (id),
 
@@ -33,4 +33,4 @@ CREATE TABLE estudiante_materia(
     REFERENCES materia (id)
 );
 
-SELECT * FROM estudiante_materia AS em INNER JOIN materia AS m ON em.materia_id = m.id WHERE em.estudiante_id = 1;
+SELECT * FROM estudiante_materia AS em INNER JOIN materia AS m ON em.materia_id = m.id WHERE em.estudiante_id = ?;
